@@ -38,7 +38,7 @@
     --bs-danger: #dc3545;
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
-    --bs-primary-rgb: 24, 188, 156;
+    --bs-primary-rgb: 50, 188, 156;
     --bs-secondary-rgb: 44, 62, 80;
     --bs-success-rgb: 25, 135, 84;
     --bs-info-rgb: 13, 202, 240;
@@ -85,6 +85,14 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
+@keyframes animation1 {
+    0%{
+        transform: translateY(40px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 
 hr {
     margin: 1rem 0;
@@ -111,10 +119,20 @@ h2,
 h1,
 .h1 {
     margin-top: 0;
-    margin-bottom: .5rem;
+     margin-bottom: 0.5rem; 
     font-weight: 500;
     line-height: 1.2
-    var(--bs-body-color)
+    var(--bs-body-color);
+   
+}
+ .h21{
+    margin-top: 0;
+    margin-bottom: 0.5rem; 
+   font-weight: 500;
+   line-height: 1.2
+   var(--bs-body-color);
+    margin-left: 12%;
+    margin-bottom: -7%;
 }
 
 h1,
@@ -155,7 +173,21 @@ h3,
         font-size: 1.75rem
     }
 }
+ .item1 {
 
+ 
+    animation: animation1 3s ease-out;
+ }
+ .item2{
+
+ 
+    animation: animation1 3s ease-out;
+ }
+ .item3{
+
+ 
+    animation: animation1 3s ease-out;
+ }
 h4,
 .h4 {
     font-size: calc(1.275rem + 0.3vw)
@@ -640,8 +672,8 @@ progress {
 }
 
 .img-fluid {
-    max-width: 100%;
-    height: auto
+    max-width: 80%;
+    height: 50%;
 }
 
 .img-thumbnail {
@@ -667,19 +699,34 @@ progress {
     color: #868e96
 }
 
+
+.containerf{
+    display: inline-flex;
+    justify-content:space-around;
+
+    width: 100%;
+    /* padding-right: var(--bs-gutter-x, 0.75rem); */
+    /* padding-left: var(--bs-gutter-x, 0.75rem); */
+ 
+}
+
 .container,
 .container-fluid,
 .container-xxl,
 .container-xl,
 .container-lg,
 .container-md,
-.container-sm {
+.container-sm{
     width: 100%;
     padding-right: var(--bs-gutter-x, 0.75rem);
     padding-left: var(--bs-gutter-x, 0.75rem);
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto 
 }
+
+/* .container-sm {
+    width: 50%;
+} */
 
 @media(min-width: 576px) {
 
@@ -731,25 +778,49 @@ progress {
     }
 }
 
+.rowfooter{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display:flex;
+    margin-left: 5%;
+    width: 100%;
+    max-width: 100%;
+
+}
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
+    display:flex;
+    /* flex-wrap: wrap;  */
+    /* flex-wrap:nowrap; */
     margin-top: calc(-1 * var(--bs-gutter-y));
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x))
 }
 
+
 .row>* {
-    flex-shrink: 0;
+     flex-shrink: 0; 
+    /* flex-wrap: wrap; */
     width: 100%;
     max-width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-top: var(--bs-gutter-y)
-}
+    /* margin-top: 10%;
+    margin-left:5%; */
 
+}
+.row1>* {
+    /* flex-shrink: 0; */
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: 10%;
+    margin-left:5%;
+
+}
 .col {
     flex: 1 0 0%
 }
@@ -8289,7 +8360,8 @@ fieldset:disabled .btn {
 }
 
 .mb-5 {
-    margin-bottom: 3rem !important
+    margin-bottom
+    : 3rem !important
 }
 
 .mb-auto {
@@ -12264,7 +12336,10 @@ hr.star-dark:after {
     color: #2c3e50;
     background-color: #fff
 }
-
+.mb-5 {
+    width: 15%;
+    height: 15%;
+}
 section {
     padding: 6rem 0
 }
@@ -12424,6 +12499,8 @@ header.masthead .h2 {
 .portfolio .portfolio-item {
     position: relative;
     display: block;
+
+    
     max-width: 25rem;
     margin-bottom: 15px
 }
@@ -12545,8 +12622,8 @@ header.masthead .h2 {
 }
 
 .footer {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 0.5rem;
     background-color: #4f3d40;
     color: #fff
    
@@ -12580,9 +12657,9 @@ a:active {
     background-color: #423336 !important
 }
 
-.text-primary {
+/* .text-primary {
     color: #18bc9c !important
-}
+} */
 
 .text-secondary {
     color: #2c3e50 !important
